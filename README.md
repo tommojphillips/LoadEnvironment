@@ -12,6 +12,8 @@ Load environment variables from a file
 for /f "delims=" %%k in ('loadenv.exe <cfg> <switches>') do ( %%k )
 ```
 
+![Screenshot 2024-05-16 111037](https://github.com/tommojphillips/LoadEnvironment/assets/39871058/c0113450-2804-43db-9052-2ada93f40591)
+
 ##### To suppress the std error output, redirect it to nul.
 ```
 for /f "delims=" %%k in ('loadenv.exe <cfg> <switches> 2^>nul') do ( %%k )
