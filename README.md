@@ -49,3 +49,7 @@ NEXT_VAR=%OTHER_VAR% 123
 
 ### Switches 
 - -q    - Suppress all output except for errors.
+
+### Example cfg file ( .ini )
+![Screenshot 2024-05-16 105717](https://github.com/tommojphillips/LoadEnvironment/assets/39871058/2f0653cb-e1bb-4c69-9f68-40d4bbddf026)
+
