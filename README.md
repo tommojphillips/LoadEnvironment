@@ -4,21 +4,22 @@ Load environment variables from a file
 - This program is designed to be used in a batch script. (.bat .cmd)
 - doesn't directly set the variable, but outputs the commands to do so.
 
+### Usage ```loadenv.exe <cfg> <switches>```
   
 
 ##### To set variables in the current environment, use a FOR LOOP in batch to 'catch the output'
 ```
-for /f "delims=" %%k in ('loadenv.exe') do ( %%k )
+for /f "delims=" %%k in ('loadenv.exe <cfg> <switches>') do ( %%k )
 ```
 
 ##### To suppress the std error output, redirect it to nul.
 ```
-for /f "delims=" %%k in ('loadenv.exe 2^>nul') do ( %%k )
+for /f "delims=" %%k in ('loadenv.exe <cfg> <switches> 2^>nul') do ( %%k )
 ```
 
 ##### To log the std error, redirect it to a file.
 ```
-for /f "delims=" %%k in ('loadenv.exe 2^>error.txt') do ( %%k )
+for /f "delims=" %%k in ('loadenv.exe <cfg> <switches> 2^>error.txt') do ( %%k )
 ```
 
 ##### Comments can be used in the cfg file, they must start with ```;```
